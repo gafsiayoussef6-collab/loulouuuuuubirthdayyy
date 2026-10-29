@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080613">
+  <meta name="description" content="Une petite page magique pour célébrer un anniversaire spécial.">
+  <title>loulouuubirthdayyy 🫶🏼</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/script.js" defer></script>
+</head>
+<body>
+  <div class="stars" aria-hidden="true"></div>
+  <header class="navbar">
+    <a class="brand" href="#home">loulouuubirthdayyy <span>♡</span></a>
+    <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+    <nav class="nav-links">
+      <a href="#home">Accueil</a>
+      <a href="#about">À propos</a>
+      <a href="#countdown">Compte à rebours</a>
+      <a href="#wishes">Souhaits</a>
+      <a href="gallery.html">Nos souvenirs ♡</a>
+    </nav>
+    <button id="themeToggle" class="icon-button" aria-label="Changer le thème">☾</button>
+    <audio id="bg-music" loop>
+    <source src="assets/Sting - Shape of My Heart (Lyrics).mp3" type="audio/mpeg">
+    </audio>
+
+    <button   class="icon-button" onclick="const music = document.getElementById('bg-music');  music.paused ? music.play() : music.pause();">
+      🎵
+    </button>
+  </header>
+
+  <main>
+    <section id="home" class="hero section">
+      <div class="hero-copy reveal">
+        <span class="eyebrow">✦ C’est ton jour habybyyy ♡</span>
+        <h1>Happy Birthday,<br><span>loulouuu</span> <span class="heart">♡</span></h1>
+        <p>Un petit coin magique pour célébrer une personne spéciale. Que cette journée soit remplie d’amour, de rires et de jolis souvenirs. ✨</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#wishes">Découvrir la surprise <span>↗</span></a>
+          <button class="button secondary" id="confettiButton">Lancer les confettis ✨</button>
+        </div>
+        <p class="tiny-note">Fait avec beaucoup d’amour 🫶🏼</p>
+      </div>
+      <div class="cake-scene reveal" aria-label="Illustration d’un gâteau d’anniversaire">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="spark spark-a">✦</div><div class="spark spark-b">♡</div><div class="spark spark-c">✧</div>
+        <div class="candle"><div class="flame"></div></div>
+        <div class="cake-top"><span>♡</span></div>
+        <div class="cake-body"><div class="icing"></div><div class="cake-heart">♡</div><div class="sprinkles">✦ · ✧ · ✦</div></div>
+        <div class="cake-plate"></div>
+        <div class="handwritten">sweet 18 </div>
+      </div>
+      <a class="scroll-cue" href="#about">↓ &nbsp; Scroll pour explorer</a>
+    </section>
+
+    <section id="about" class="section about reveal">
+      <div class="section-heading">
+        <span class="eyebrow">UN JOUR SPÉCIAL</span>
+        <h2>Un peu de magie,<br><span>rien que pour toi.</span></h2>
+      </div>
+      <p>Il y a des personnes qui rendent les journées plus belles juste en étant elles-mêmes. Cette page est une petite façon de leur rappeler combien elles comptent. 💜</p>
+      <div class="mini-cards">
+        <article class="mini-card"><span class="card-icon">☁</span><h3>Des rêves</h3><p>Que tes plus beaux rêves trouvent leur chemin.</p></article>
+        <article class="mini-card"><span class="card-icon">♡</span><h3>De l’amour</h3><p>Que tu sois entourée de douceur et de belles personnes.</p></article>
+        <article class="mini-card"><span class="card-icon">✧</span><h3>Des souvenirs</h3><p>Que cette nouvelle année soit inoubliable.</p></article>
+      </div>
+    </section>
+
+    <section id="countdown" class="section countdown-section reveal">
+      <span class="eyebrow">3EDDEK BEHA 19 EEE</span>
+      <h2>Le compte à rebours <span>♡</span></h2>
+      
+      <div class="countdown" aria-live="polite">
+        <div class="time-box"><strong id="days">00</strong><span>Jours</span></div>
+        <div class="time-box"><strong id="hours">00</strong><span>Heures</span></div>
+        <div class="time-box"><strong id="minutes">00</strong><span>Minutes</span></div>
+        <div class="time-box"><strong id="seconds">00</strong><span>Secondes</span></div>
+      </div>
+      <p id="countdownMessage" class="countdown-message">Chaque seconde nous rapproche d’un joli moment ✨</p>
+    </section>
+
+    <section  id="wishes" class="section wishes reveal">
+      <div class="gift-card">
+        <div class="gift-emoji" aria-hidden="true">🎁</div>
+        <span class="eyebrow">UNE SURPRISE POUR TOI</span>
+        <h2>Un cadeau rempli <span>d’amour</span></h2>
+        <p>Appuie sur le cadeau pour découvrir mon petit cadeau 💜</p>
+        <button class="button primary" id="familyGiftButton">Ouvrir le cadeau 🎁</button>
+      </div>
+    </section>
+
+    <section id="gift" class="section gift-section reveal">
+      <div class="wish-card">
+        <div class="wish-decoration">✦ &nbsp; ♡ &nbsp; ✧</div>
+        <span class="eyebrow">UN PETIT MOT POUR TOI</span>
+        <h2>Joyeux anniversaire,<br><span>ma belle âme.</span></h2>
+        <p>Je te souhaite une année pleine de bonheur, de santé, de réussite et de moments qui te donnent le sourire. N’oublie jamais à quel point tu es unique. Continue de briller à ta façon. 💜</p>
+        <a class="button secondary" href="gallery.html">Voir tous nos souvenirs ♡</a>
+        <button class="button primary" id="wishButton">Une dernière surprise ♡</button>
+        <p id="secretMessage" class="secret-message" hidden>appy birthday ya rou7i w ya a7la 7aja saretli fi 7yeti ❤️🎂 N7ebek barcha barcha w  ma na3rech kifeh nousseflk  9addeh enti ghalya 3andi w 9addeh wjoudik badelli 7yeti lel a7sen Enti moch juste gf enti okhti w sahebti w rou7i w el 3abd eli dima n7ess m3ah eli denya mazelt fiha 7ajet behin. D5alt l7yeti w badelt fiha barcha 7ajet lel behi, farra7tini fi wa9t eli kont nst7a9 fih chkoun yfarra7ni w khallitni n7ess b7ajet mahelhom ma kontch netwa9a3hom Ma fama 7atta kelma tnajem toussef  9addeh n7ebek w 9addeh n9adderek w n7med raby eli 3raftk❤️🥹
+Fi 3id miledik, netmannalek men 9albi kol khir fi denya, netmannalek far7a ma toufech ra7et bel netmana rabi y7a99a9lek kol 7olm fi 9albek w y3awadhlek 3la kol mara t3ebt fehaa  w kol mara bkit Netmannalek dima nchoufek tdh7ek  men 9albek far7ana w merte7a w nchhlh rabbi dima y7ot fi tri9ek nes t7ebek w yba3ed 3lik kol chay ynajjem ydhorek 🥹🤍
+W n7ebek ta3ref 7aja lenti 3andek blasa fi 9albi ma ya5ouha 7atta 7ad mahma hazetna denya w daret bina enti dima bech tab9a  ensen 3ziz 3leya N7ebek fi far7ek w fi hoznek fi 9owtek w fi dho3fek w dima n7eb nkoun janbek kif ma enti kont ahsen supporter N7eb nchoufek dima toussel lkol chay tetmaneh w nkounou dima ma badhna n3ichou barcha hajet mezyenin nethakrouhom ki nkebrou ❤️
+Kol 3am w enty mzyena Kol 3am w enti far7ti   w a7la cadeau 3tethouli denya
+Happy birthday my favorite person, my safe place, w a7la bnaya sghyra fi 7yeti I love you more than words could ever explain ya rou7i ❤️🥹🫶🏻
+Urs Youssef
+      </div>
+    </section>
+
+    <div class="video-modal" id="familyVideoModal" hidden role="dialog" aria-modal="true" aria-label="Vidéo de la famille">
+      <div class="video-modal-card">
+        <header>
+         
+    <audio id="bg-music" loop>
+    <source src="assets/Sting - Shape of My Heart (Lyrics).mp3" type="audio/mpeg">
+    </audio>
+
+    <button   class="icon-button" onclick="const music = document.getElementById('bg-music');  music.paused ? music.play() : music.pause();">
+      🎵
+    </button> 
+        </header>
+        <button class="modal-close" id="closeFamilyVideo" aria-label="Fermer">×</button>
+        <span class="eyebrow">DE TOUT LE MONDE, AVEC AMOUR</span>
+        <h2>Joyeux anniversaire ! 💜</h2>
+        <p>Un petit message , rien que pour toi.</p>
+        <video id="familyVideo" controls playsinline preload="metadata">
+          <source src="assets/media/df9ad599-d411-4755-a5cb-c3de4519834f.mp4" type="video/mp4">
+          Ton navigateur ne peut pas lire cette vidéo.
+        </video>
+        
+      </div>
+    </div>
+
+    
+  </main>
+
+  <footer><a class="brand" href="#home">loulouuubirthdayyy <span>♡</span></a><p>Créé avec amour, pour un jour unique.</p><a href="#home" class="back-top">Retour en haut ↑</a></footer>
+  <div id="confettiLayer" class="confetti-layer" aria-hidden="true"></div>
+</body>
+</html>
